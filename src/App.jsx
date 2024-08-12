@@ -13,6 +13,8 @@ import Incrementer from './IncrementBtn';
 import Toggler from './Toggler';
 import Box from './Box';
 import ColorBox from './Colorbox';
+import ScoreKeeper from './ScoreKeeper';
+import LuckyN from './LuckyN';
 
 const data = [
   { id: 1, name: 'carrot', quantity: 5, completed: true },
@@ -28,10 +30,14 @@ function App() {
   return (
     <>
       <div>
-        <ColorBox />
+        <LuckyN dice={[1,2,3,4]}/>
+        <LuckyN numDice={3} goal={11}/>
 
-        {/*<Incrementer/>
-         <Clicker text='click me' message='Hello react!'/>
+
+        {/*<ScoreKeeper/>
+       <ColorBox />
+        <Incrementer/>
+        <Clicker text='click me' message='Hello react!'/>
         <Heading color='#646cff' text='Hello React!!'/>
         <Greet person='Vignesh'/>
         <Greet person='Raj karan'/>

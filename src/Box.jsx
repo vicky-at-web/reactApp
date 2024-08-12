@@ -22,7 +22,7 @@ export default function Box() {
 
 
     return (
-        <div onClick={changeColor} style={{ backgroundColor: color, width: '100px', height: '100px', display:'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div onClick={changeColor} style={{ backgroundColor: color, width: '100px',borderRadius: '20px', height: '100px', display:'flex', alignItems: 'center', justifyContent: 'center' }}>
 <h3>{index}</h3>
         </div>
 
