@@ -15,6 +15,15 @@ import Box from './Box';
 import ColorBox from './Colorbox';
 import ScoreKeeper from './ScoreKeeper';
 import LuckyN from './LuckyN';
+import Form from './Form';
+import ShopList from './ShopList';
+import ShoppingItems from './ShoppingItems';
+import Formex from './Formex';
+import Effects from './Effects';
+
+import { sum } from './utils';
+import QuoteGenerator from './Quote';
+import GithubProfileSearch from './GithubProfileSearch';
 
 const data = [
   { id: 1, name: 'carrot', quantity: 5, completed: true },
@@ -27,15 +36,29 @@ const data = [
 function App() {
   const [count, setCount] = useState(0)
 
+  const isLessThanFour = (dice) => {
+    return sum(dice) <= 4
+  }
+
+  const allSameValues = (dice) => {
+    return dice.every(d => d === dice[0])
+  }
+
   return (
     <>
       <div>
-        <LuckyN dice={[1,2,3,4]}/>
-        <LuckyN numDice={3} goal={11}/>
-
-
-        {/*<ScoreKeeper/>
-       <ColorBox />
+        {/*<GithubProfileSearch/>
+        <QuoteGenerator/>
+        <Effects/>
+        <Formex/>
+        <ShoppingItems/>
+        <Form/>
+        <LuckyN winCheck={isLessThanFour} title={'Score less than 4 to win '} />
+        <LuckyN numDice={3} winCheck={allSameValues} title={'Score same numbers to win '}/>
+        <ScoreKeeper/>
+        */}
+        <ColorBox />
+        {/*
         <Incrementer/>
         <Clicker text='click me' message='Hello react!'/>
         <Heading color='#646cff' text='Hello React!!'/>
